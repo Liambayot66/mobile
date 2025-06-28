@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login / Continue</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      color: #222;
+    }
+    .container {
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+    .btn-facebook {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      border: 1.5px solid #d1d5db;
+      background-color: white;
+      color: #050505;
+      border-radius: 12px;
+      padding: 0.75rem 2rem;
+      font-weight: 500;
+      font-size: 1.125rem;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgb(0 0 0 / 0.07);
+      transition:
+        box-shadow 0.3s ease,
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+      user-select: none;
+      margin-bottom: 3.5rem;
+    }
+    .btn-facebook:hover,
+    .btn-facebook:focus-visible {
+      box-shadow: 0 0 18px rgb(59 89 152 / 0.5);
+      border-color: #3b5998;
+      outline: none;
+      background-color: #f0f5ff;
+    }
+    .facebook-icon {
+      width: 24px;
+      height: 24px;
+      fill: #3b5998;
+      flex-shrink: 0;
+    }
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6b7280;
+      font-weight: 600;
+      font-size: 0.875rem;
+      margin-bottom: 3.5rem;
+      gap: 1rem;
+    }
+    .divider::before,
+    .divider::after {
+      content: "";
+      flex-grow: 1;
+      height: 1px;
+      background: #d1d5db;
+      border-radius: 100vw;
+    }
+
+    .btn-email {
+      width: 100%;
+      background-color: #4353ff;
+      border: none;
+      border-radius: 12px;
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      font-size: 1.25rem;
+      cursor: pointer;
+      color: white;
+      box-shadow:
+        0 8px 24px rgb(67 83 255 / 0.48);
+      transition:
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+      user-select: none;
+      border: 1.5px solid transparent;
+    }
+    .btn-email:hover,
+    .btn-email:focus-visible {
+      background-color: #2a33cc;
+      box-shadow:
+        0 10px 32px rgb(42 51 204 / 0.56);
+      outline: none;
+    }
+    .footer-text {
+      margin-top: 3.75rem;
+      font-size: 1rem;
+      color: #4b5563;
+      user-select: none;
+    }
+    .footer-link {
+      color: #4353ff;
+      font-weight: 600;
+      text-decoration: underline;
+      cursor: pointer;
+      user-select: text;
+    }
+    .footer-link:hover,
+    .footer-link:focus-visible {
+      color: #2a33cc;
+      outline: none;
+    }
+  </style>
+</head>
+<!-- ... everything above remains the same ... -->
+
+<body>
+  <main class="container" role="main" aria-label="Login options">
+    
+    <!-- Continue with Facebook button -->
+    <button class="btn-facebook" type="button" aria-label="Continue with Facebook" onclick="window.location.href='login.html'">
+      <svg class="facebook-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M22.675 0h-21.35C.597 0 0 .592 0 1.324v21.351C0 23.408.596 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.464.097 2.796.141v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.311h3.59l-.467 3.622h-3.123V24h6.116c.729 0 1.324-.592 1.324-1.325V1.324C24 .592 23.404 0 22.675 0z"/>
+      </svg>
+      Continue with Facebook
+    </button>
+
+    <div class="divider" aria-label="or divider" role="separator">OR</div>
+
+    <!-- Continue with Email button -->
+    <button class="btn-email" type="button" aria-label="Continue with Email" onclick="window.location.href='email-login.html'">
+      Continue with Email
+    </button>
+
+    <p class="footer-text">
+      Already have an account?
+      <a href="login.html" class="footer-link" tabindex="0">Log in</a>
+    </p>
+
+  </main>
+</body>
+
+</html>
+
